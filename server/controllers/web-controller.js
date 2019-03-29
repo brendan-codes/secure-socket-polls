@@ -1,12 +1,14 @@
 module.exports = {
 
+    index: function(req, res){
 
+    },
 
+    about: function(req, res){
 
-    // serve index
+    },
 
-    // serve hall of fame 'history'
+    hall_of_fame: function(req, res){
 
-    // serve about
-
+    }
 };

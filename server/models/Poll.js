@@ -1,5 +1,16 @@
-// require mongoose
+let mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
+
+let pollSchema = new Schema({
+    question: String,
+    yay: Number,
+    nay: Number,
+    process: String,
+    priority: Boolean
+});
+
+mongoose.model('Poll', pollSchema);
 
 
 // poll

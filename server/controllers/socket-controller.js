@@ -1,14 +1,17 @@
-module.exports = {
+module.exports = function(io){
 
+    io.on('connection', function(socket){
 
+        // welcome to sockets
 
-    // vote yay on poll
-    // vote nay on poll
+            // vote yay on poll
+            // vote nay on poll
 
-    // broadcast poll updates
+            // broadcast poll updates
 
-    // fill buffer
-    // buffer overflow control
+            // fill buffer
+            // buffer overflow control
 
+    });
 
 };
