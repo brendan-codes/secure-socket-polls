@@ -11,5 +11,4 @@ module.exports = function(app){
     app.get('/hall-of-fame', function(req, res){
         res.send('<h1>hall-of-fame</h1>')
     })
-
 };
