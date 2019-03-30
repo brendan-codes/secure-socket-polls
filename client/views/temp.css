@@ -1,3 +1,80 @@
+body{
+    display: block;
+	color: #e9e2ee;
+	font-size: 14px;
+	font-family: sans-serif;
+    line-height: 20px;
+    height: 100vh;
+    /* width: 100%; */
+    background: rgb(131,97,175);
+    background: linear-gradient(146deg, rgba(131,97,175,1) 12%, rgba(72,166,159,1) 100%);
+    align-content: center;
+	/* text-shadow: 0 1px 1px rgba(0,0,0,0.75); */
+
+
+
+
+
+
+    /* background: #6c4f91;
+	animation: colorchange 55s infinite;
+	-webkit-animation: colorchange 55s infinite; */
+}
+
+.twoblock{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+    height: 35%;
+    /* background-color: pink; */
+}
+
+.votecell{
+    display: inline-block;
+    padding: 15px;
+    width: 40%;
+    height: 70%;
+    /* background-color: blue; */
+}
+
+.footblock{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height: 20%;
+    /* vertical-align: text-bottom; */
+    /* background-color: pink; */
+}
+
+.footblock h3{
+    display: block;
+    vertical-align: text-bottom;
+}
+
+/* @keyframes colorchange{
+	0%   {background: #6c4f91;}
+	50%  {background: #4f918c;}
+	100% {background: #6c4f91;}
+}
+
+@-webkit-keyframes colorchange{
+	0%   {background: #6c4f91;}
+	50%  {background: #4f918c;}
+	100% {background: #6c4f91;}
+} */
+
+
+
+
+
+
+
+
+
+
+
 .pushme2 {
     color: #fcfcfc;
     position: relative;
