@@ -1,3 +1,4 @@
+
 body{
     display: block;
 	color: #e9e2ee;
@@ -9,6 +10,8 @@ body{
     background: rgb(131,97,175);
     background: linear-gradient(146deg, rgba(131,97,175,1) 12%, rgba(72,166,159,1) 100%);
     align-content: center;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
 	/* text-shadow: 0 1px 1px rgba(0,0,0,0.75); */
 
 
@@ -19,6 +22,43 @@ body{
     /* background: #6c4f91;
 	animation: colorchange 55s infinite;
 	-webkit-animation: colorchange 55s infinite; */
+}
+
+h1 {
+    font-size: 60px;
+    padding-top: 50px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.title{
+    /* padding-top: 5vh; */
+}
+
+.blue{
+    color: #48a69f
+}
+
+.purple{
+    color: #8361af;
 }
 
 .twoblock{
@@ -49,8 +89,20 @@ body{
 }
 
 .footblock h3{
-    display: block;
     vertical-align: text-bottom;
+    display: inline-block;
+}
+
+.footpusher{
+    height: 70%;
+}
+
+.number{
+    font-family: monospace;
+}
+
+.thin{
+    font-weight: 100;
 }
 
 /* @keyframes colorchange{

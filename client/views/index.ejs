@@ -7,30 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <script src="/js/client-sockets.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
-    <script src='temp.js'></script>
-    <link rel="stylesheet" href="temp.css">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src='/js/sockets.js'></script>
+    <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
 
     <div class='twoblock'>
-        <h1>Hello World!</h1>
+        <h1 class='title'>Yay or Nay Your Day Away</h1>
+        <h3 class='thin'>click as many times as you feel is necessary to truly capture your opinion</h3>
     </div>
 
     <div class='twoblock'>
-        <h1>did video kill the radio star?</h1>
+        <h4 class='thin'>today's yay or nay:</h4>
+        <h2>did video kill the radio star?</h2>
 
         <div class='votecell'>
-            <h3>current yay total</h3>
-            <h3 class='number'>0012929292022920</h3>
+            <h4 class='thin'>current yay total</h4>
+            <h4 class='number'>0012929292022920</h4>
             <a class='pushme2' href="#">
                 <span class='inner2'>   Y A Y   </span>
             </a>
         </div>
 
         <div class='votecell'>
-            <h3>current yay total</h3>
-            <h3 class='number'>0012929292022920</h3>
+            <h4 class='thin'>current yay total</h4>
+            <h4 class='number'>0012929292022920</h4>
             <a class='pushme1' href="#">
                 <span class='inner1'>   N A Y   </span>
             </a>
@@ -38,7 +41,8 @@
     </div>
 
     <div class='footblock'>
-        <h3>i'm the footer hurhurdeedur</h3>
+        <div class='footpusher'></div>
+        <h6>i'm the footer hurhurdeedur</h6>
     </div>
 
 </body>

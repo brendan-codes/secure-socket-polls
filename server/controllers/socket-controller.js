@@ -5,6 +5,8 @@ module.exports = function(io){
 
     io.on('connection', function(socket){
 
+
+        console.log('somebody connected!')
         // welcome to sockets
 
             // vote yay on poll
