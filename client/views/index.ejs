@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Secure Socket Polls</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="/js/client-sockets.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script src='/js/sockets.js'></script>
-    <link rel="stylesheet" href="/css/main.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+    <script type='text/javascript' src='/socket.io/socket.io.js'></script>
+    <link rel='stylesheet' href='/css/main.css'>
 
 </head>
 <body>
@@ -19,23 +17,23 @@
         <h3 class='thin'>click as many times as you feel is necessary to truly capture your opinion</h3>
     </div>
 
-    <div class='twoblock'>
+    <div class='twoblock' id='app'>
         <h4 class='thin'>today's yay or nay:</h4>
         <h2>did video kill the radio star?</h2>
 
         <div class='votecell'>
             <h4 class='thin'>current yay total</h4>
-            <h4 class='number'>0012929292022920</h4>
-            <a class='pushme2' href="#">
-                <span class='inner2'>   Y A Y   </span>
+            <h4 class='number'>{{data.yay}}</h4>
+            <a class='pushme2' href='#'>
+                <span class='inner2' v-on:click='yay()'>   Y A Y   </span>
             </a>
         </div>
 
         <div class='votecell'>
             <h4 class='thin'>current yay total</h4>
-            <h4 class='number'>0012929292022920</h4>
-            <a class='pushme1' href="#">
-                <span class='inner1'>   N A Y   </span>
+            <h4 class='number'>{{data.nay}}</h4>
+            <a class='pushme1' href='#'>
+                <span class='inner1' v-on:click='nay()'>   N A Y   </span>
             </a>
         </div>
     </div>
@@ -47,3 +45,4 @@
 
 </body>
 </html>
+<script src='/js/app.js'></script>
