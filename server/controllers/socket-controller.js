@@ -3,7 +3,7 @@ let mongoose = require('mongoose'),
     Poll = mongoose.model('Poll');
 
 
-let TOTALS = {
+let CACHE = {
     yay: 0,
     nay: 0,
     overflow: 0
@@ -14,14 +14,37 @@ const LIMITS = {
     schedule: '*/5 * * * *'
 };
 
+// let SocketController = class SocketController {
+//     constructor(){
+
+//     }
+
+
+
+
+// }
+
 module.exports = function(io){
+
+    io.origins((origin, callback) => {
+        if (origin !== 'https://foo.example.com') {
+            return callback('origin not allowed', false);
+        }
+        callback(null, true);
+    });
 
     io.on('connection', function(socket){
 
         console.log('somebody connected!')
 
+
+
+
+        // if somebody can connect
+            //
+
         socket.on('nay:vote', function(data){
-            // update totals
+            // update CACHE
 
             // broadcast immediately
             socket.broadcast.emit('nay:broadcast', {
@@ -29,14 +52,14 @@ module.exports = function(io){
             });
 
             // udpate overflow
-            TOTALS.overflow++;
+            CACHE.overflow++;
 
             // check overflow
             checkOverflow();
         });
 
         socket.on('yay:vote', function(data){
-            TOTALS.overflow++;
+            CACHE.overflow++;
             console.log("yay++");
             // update
 
@@ -50,10 +73,10 @@ module.exports = function(io){
 };
 
 function checkOverflow(){
-    if(TOTALS.overflow > LIMITS.overflow){
+    if(CACHE.overflow > LIMITS.overflow){
         // save operation
 
-        TOTALS.overflow = 0;
+        CACHE.overflow = 0;
     }
 };
 
@@ -62,5 +85,5 @@ cron.schedule(LIMITS.schedule, () => {
 
     // save operation
 
-    TOTALS.overflow = 0;
+    CACHE.overflow = 0;
 });

@@ -1,6 +1,13 @@
-console.log('honk honk');
+var connectionOptions =  {
+    "force new connection" : true,
+    "reconnectionAttempts": "Infinity",
+    "timeout" : 10000,
+    "transports" : ["websocket"]
+};
 
-let socket = io();
+let socket = io.connect('localhost:8001', connectionOptions);
+
+// let socket = io.connect('*', {transports: ['websocket', 'polling', 'flashsocket']});
 
 let totals = {
     yay: 0,
